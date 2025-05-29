@@ -1,0 +1,48 @@
+.notregion {
+    fill: #1CA3EC
+}
+
+.desert {
+    fill: bisque;
+}
+
+.sirdarya {
+    fill: #75bb89;
+}
+
+.ohangaranmap {
+    width: 100% !important;
+    object-fit: contain;
+}
+
+.ohangaranmap__path {
+    transition: 0.3s;
+    cursor: pointer;
+    stroke-width: 2px;
+    stroke: #fff;
+    fill: #007bff;
+
+}
+
+.uzbmap path {
+    transition: all 0.3s ease-in-out;
+}
+.uzbmap{
+    height: 100%;
+}
+.uzbmap svg{
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+}
+.uzbmap path:hover {
+    opacity: 0.6;
+}
+
+.uzbmap.regions path {
+    transition: 0.3s;
+    cursor: pointer;
+    stroke-width: 2px;
+    stroke: #fff;
+    /* fill: #007bff; */
+}
