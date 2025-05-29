@@ -12,7 +12,7 @@
           </p>
           <button
             class="px-3 py-2 bg-white border text-black flex w-fit gap-2 items-center rounded-xl text-sm">
-            <span class="max-md:hidden">Batafsil ma’lumot</span>
+            <a href='https://keeping.uz/' target='_blank' class="max-md:hidden">Batafsil ma’lumot</a>
             <svg
               width="18"
               height="18"
