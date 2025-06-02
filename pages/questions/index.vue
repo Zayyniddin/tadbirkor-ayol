@@ -1,40 +1,30 @@
 <template>
 	<section class="w-full flex bg-white py-6">
 		<div class="f-container mx-auto px-2 flex flex-col gap-16">
-			<div class="w-full flex items-center justify-between">
-				<h1 class="text-4xl font-bold max-w-[400px] leading-[125%]">
-					Biznes marketing va huquqiy maslahatlar
-				</h1>
-				<button class="flex items-center text-green-500 gap-1">
-					Barchasi
-					<svg
-						width="18"
-						height="18"
-						viewBox="0 0 18 18"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
+			<div class="f-container flex flex-col gap-16">
+				<div class="w-full flex items-center justify-between">
+					<h1 class="text-4xl font-bold flex-1 leading-[125%]">
+						Biznes marketing va huquqiy maslahatlar
+					</h1>
+				</div>
+				<div class="w-full grid grid-cols-3 gap-6 justify-between">
+					<ConsultVideoCard v-for="(item, i) in news" :key="i" :data="item" />
+				</div>
+				<div
+					class="flex justify-center items-center"
+					v-if="filter.total > filter.page_size"
+				>
+					<div
+						@click="getNewsPage"
+						class="px-4 py-3 rounded-xl cursor-pointer text-sm transition-colors duration-300 bg-green-500 text-white"
+						:class="{
+							'bg-[#F7F8F9] text-[#2B2F38] pointer-events-none opacity-50':
+								filter.page * filter.page_size >= filter.total,
+						}"
 					>
-						<path
-							d="M10.8225 4.44751L15.375 9.00001L10.8225 13.5525"
-							stroke="#02C6B8"
-							stroke-width="1.5"
-							stroke-miterlimit="10"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-						<path
-							d="M2.625 9H15.2475"
-							stroke="#02C6B8"
-							stroke-width="1.5"
-							stroke-miterlimit="10"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-					</svg>
-				</button>
-			</div>
-			<div class="w-full grid grid-cols-3 gap-6 justify-between">
-				<ConsultVideoCard v-for="(item, i) in news" :key="i" :data="item" />
+						Yana yuklash
+					</div>
+				</div>
 			</div>
 			<div class="demo-collapse">
 				<h2 class="text-4xl max-w-[400px] font-bold mb-4">
@@ -163,7 +153,8 @@
 					</el-collapse-item>
 				</el-collapse>
 			</div>
-			<ConsultQuestionnaireForm />
+			<!-- <ConsultQuestionnaireForm /> -->
+			<FormsQuestionsQuestionaryForm />
 		</div>
 	</section>
 </template>
@@ -176,17 +167,21 @@ const filter = reactive({
 	total: 0,
 })
 
-// const activeNames = ref(['1'])
-
 async function getNews() {
 	try {
 		const res = await useApi(
-			`https://tadbirkor-ayol.uz/services/platon-core/api/v1/video/instructions?lang=uz&page=${filter.page}&page_size=6`
+			`https://tadbirkor-ayol.uz/services/platon-core/api/v1/video/instructions?lang=uz&page=${filter.page}&page_size=${filter.page_size}`
 		)
 
 		news.value = [...news.value, ...res.data.data]
 		filter.total = res.data.total
 	} catch (error) {}
+}
+async function getNewsPage() {
+	if (filter.page * filter.page_size <= filter.total) {
+		filter.page++
+		await getNews()
+	}
 }
 
 onMounted(() => {

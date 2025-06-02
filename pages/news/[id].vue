@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full">
-		<div class="f-container mx-auto flex items-stretch gap-14 max-lg:flex-col">
+		<div class="f-container mx-auto flex items-stretch gap-14 mb-10 max-lg:flex-col">
 			<div class="flex flex-1 flex-col gap-2">
 				<img
 					class="max-w-[750px] w-full rounded-xl mb-8 relative h-[398px] overflow-hidden max-md:h-[280px]"

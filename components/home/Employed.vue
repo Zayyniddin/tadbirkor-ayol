@@ -17,7 +17,7 @@
 						sizga yo‘l-yo‘riq ko‘rsatamiz
 					</p>
 					<a
-						href="https://keeping.uz/"
+						href="https://mehnat.uz/"
 						target="_blank"
 						class="px-4 py-3 cursor-pointer bg-white border text-black flex w-fit gap-2 items-center rounded-xl text-sm"
 					>

@@ -12,12 +12,24 @@
 				<el-input v-model="ruleForm.full_name" />
 			</el-form-item>
 
+			<el-form-item label="Biznes nomi" prop="business_name">
+				<el-input v-model="ruleForm.business_name" />
+			</el-form-item>
+
 			<el-form-item label="Telfon raqam" prop="mobile_phone">
-				<el-input placeholder="+998" v-model="ruleForm.mobile_phone" />
+				<el-input placeholder="+998 9" v-model="ruleForm.mobile_phone" />
 			</el-form-item>
 
 			<el-form-item label="Elektron pochta manzili" prop="email">
 				<el-input placeholder="info@gmail.com" v-model="ruleForm.email" />
+			</el-form-item>
+
+			<el-form-item label="Faoliyat sohasi" prop="activity">
+				<el-input placeholder="Tadbirkorlik" v-model="ruleForm.activity" />
+			</el-form-item>
+
+			<el-form-item label="Qaysi soha bo’yicha" prop="direction">
+				<el-input placeholder="Dasturchi" v-model="ruleForm.direction" />
 			</el-form-item>
 
 			<el-form-item label="Muammoni batafsil tasnifi" prop="description">
@@ -62,10 +74,14 @@
 const ruleFormRef = ref()
 
 const ruleForm = reactive({
-	type: 'freejob',
+	type: 'question',
 	full_name: '',
 	mobile_phone: '',
+	business_name: '',
 	email: '',
+	direction: '',
+	activity: '',
+	resume: '',
 	description: '',
 })
 
@@ -81,6 +97,27 @@ const rules = reactive({
 			trigger: 'blur',
 		},
 ],
+	business_name: [
+		{
+			required: true,
+			message: 'Iltimos, biznes nomini kiriting',
+			trigger: 'blur',
+		},
+	],
+	direction: [
+		{
+			required: true,
+			message: 'Iltimos, yo‘nalishni kiriting',
+			trigger: 'blur',
+		},
+	],
+	activity: [
+		{
+			required: true,
+			message: 'Iltimos, faoliyat turini kiriting',
+			trigger: 'blur',
+		},
+	],
 	description: [
 		{ required: true, message: 'Iltimos, muammoni kiriting', trigger: 'blur' },
 	],
