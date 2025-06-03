@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 	ssr: false,
 	app: {
 		head: {
-			title: 'Loyihalar Fabrikasi',
+			title: 'Tadbirkor Ayol',
 			viewport: 'width=device-width, initial-scale=1',
 			link: [
 				{
