@@ -92,7 +92,7 @@
 					</el-collapse-item>
 
 					<el-collapse-item
-						title="Oilaviy tadbirkorlikni rivojlantirish dasturlari doirasida tadbirkorlik subyektlari (yuridik shaxslar) kredit olishda loyixada kamida qancha ulushi bilan qatnashadi?"
+						title="Oilaviy tadbirkorlikni rivojlantirish dasturlari doirasida tadbirkorlik subyektlari (yuridik shaxslar) kredit olishda loyihada kamida qancha ulushi bilan qatnashadi?"
 						name="7"
 					>
 						<div>Kredit oluvchi kamida 30% o ‘zini ulishi bo’ladi.</div>

@@ -49,9 +49,6 @@
       "ofetch": [
         "../node_modules/ofetch"
       ],
-      "@unhead/vue": [
-        "../node_modules/@unhead/vue"
-      ],
       "@nuxt/devtools": [
         "../node_modules/@nuxt/devtools"
       ],
@@ -90,6 +87,9 @@
       ],
       "#build": [
         "./"
+      ],
+      "#build/*": [
+        "./*"
       ],
       "#internal/nuxt/paths": [
         "../node_modules/nuxt/dist/core/runtime/nitro/utils/paths"
@@ -162,7 +162,6 @@
     "../node_modules/@nuxt/icon/runtime/server",
     "../node_modules/nuxt-svgo/runtime/server",
     "../node_modules/nuxt-swiper/runtime/server",
-    "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
     "../**/*",
@@ -182,7 +181,6 @@
     "../node_modules/@nuxt/icon/node_modules",
     "../node_modules/nuxt-svgo/node_modules",
     "../node_modules/nuxt-swiper/node_modules",
-    "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../dist"
   ]

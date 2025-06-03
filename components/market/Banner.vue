@@ -11,7 +11,7 @@
 
 				<div>
 					<p class="text-gray-500 mb-6">
-						O'z mahsulorlaringizni biz bilan tez va qulay tarzda soting
+						O'z mahsulotlaringizni biz bilan tez va qulay tarzda soting
 					</p>
 					<div class="flex items-center gap-4">
 						<a
