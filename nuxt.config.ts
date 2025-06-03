@@ -105,6 +105,8 @@ export default defineNuxtConfig({
     lazy:true,
     langDir: 'locales',
     defaultLocale: 'la',
-    
   }, 
+   experimental: {
+    viewTransition: false
+  }
 })
