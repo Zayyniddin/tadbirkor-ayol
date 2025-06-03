@@ -18,6 +18,7 @@
 				<div class="flex items-center gap-6">
 					<div class="flex relative gap-2 flex-col items-start">
 						<p class="text-base font-medium">Viloyat</p>
+						
 						<el-select
 							v-model="region_id"
 							placeholder="Viloyat"
