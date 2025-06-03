@@ -1,11 +1,9 @@
 
-import { updateAppConfig } from '#app/config'
+import { _replaceAppConfig } from '#app/config'
 import { defuFn } from 'defu'
 
 const inlineConfig = {
-  "nuxt": {
-    "buildId": "dev"
-  },
+  "nuxt": {},
   "icon": {
     "provider": "iconify",
     "class": "",
@@ -205,7 +203,7 @@ const inlineConfig = {
 // Vite - webpack is handled directly in #app/config
 if (import.meta.hot) {
   import.meta.hot.accept((newModule) => {
-    updateAppConfig(newModule.default)
+    _replaceAppConfig(newModule.default)
   })
 }
 

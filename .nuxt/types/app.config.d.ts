@@ -4,9 +4,7 @@ import type { Defu } from 'defu'
 
 
 declare const inlineConfig = {
-  "nuxt": {
-    "buildId": "dev"
-  },
+  "nuxt": {},
   "icon": {
     "provider": "iconify",
     "class": "",

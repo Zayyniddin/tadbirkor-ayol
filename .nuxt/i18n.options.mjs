@@ -44,19 +44,19 @@ export const nuxtI18nOptions = {
     {
       "code": "la",
       "files": [
-        "locales/la.json"
+        "/Users/zayn/Desktop/projects/arcihve/locales/la.json"
       ]
     },
     {
       "code": "uz",
       "files": [
-        "locales/uz.json"
+        "/Users/zayn/Desktop/projects/arcihve/locales/uz.json"
       ]
     },
     {
       "code": "ru",
       "files": [
-        "locales/ru.json"
+        "/Users/zayn/Desktop/projects/arcihve/locales/ru.json"
       ]
     }
   ],
@@ -78,6 +78,7 @@ export const nuxtI18nOptions = {
   "types": "composition",
   "debug": false,
   "parallelPlugin": false,
+  "multiDomainLocales": false,
   "i18nModules": []
 }
 
@@ -86,7 +87,7 @@ export const normalizedLocales = [
     "code": "la",
     "files": [
       {
-        "path": "locales/la.json"
+        "path": "/Users/zayn/Desktop/projects/arcihve/locales/la.json"
       }
     ]
   },
@@ -94,7 +95,7 @@ export const normalizedLocales = [
     "code": "uz",
     "files": [
       {
-        "path": "locales/uz.json"
+        "path": "/Users/zayn/Desktop/projects/arcihve/locales/uz.json"
       }
     ]
   },
@@ -102,7 +103,7 @@ export const normalizedLocales = [
     "code": "ru",
     "files": [
       {
-        "path": "locales/ru.json"
+        "path": "/Users/zayn/Desktop/projects/arcihve/locales/ru.json"
       }
     ]
   }
