@@ -457,6 +457,7 @@ declare global {
   const useNuxtApp: typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']
   const useNuxtDevTools: typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
+  const usePhoneMask: typeof import('../../composables/usePhoneMask')['usePhoneMask']
   const usePinia: typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables')['usePinia']
   const usePreviewMode: typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']
   const useRequestEvent: typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']
@@ -957,6 +958,7 @@ declare module 'vue' {
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
     readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
+    readonly usePhoneMask: UnwrapRef<typeof import('../../composables/usePhoneMask')['usePhoneMask']>
     readonly usePinia: UnwrapRef<typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables')['usePinia']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']>
@@ -1450,6 +1452,7 @@ declare module '@vue/runtime-core' {
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
     readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
+    readonly usePhoneMask: UnwrapRef<typeof import('../../composables/usePhoneMask')['usePhoneMask']>
     readonly usePinia: UnwrapRef<typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables')['usePinia']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']>

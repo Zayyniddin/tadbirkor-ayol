@@ -20,7 +20,7 @@
             <div class="w-10 h-10 rounded-full bg-[#E6F9F8] flex items-center justify-center">
               <CustomIcon name="icon-phone" class="text-white !w-5 !h-5" />
             </div>
-            <p class="text-[#2B2F38] text-base font-semibold">+998 99 515 69 19</p>
+            <a href='tel:998712102002' class="text-[#2B2F38] text-base font-semibold">+998 (71) 210-20-02</a>
           </div>
           <div class="flex items-center gap-4">
             <div class="w-10 h-10 rounded-full bg-[#E6F9F8] flex items-center justify-center">

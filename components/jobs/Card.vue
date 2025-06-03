@@ -10,7 +10,13 @@
 		<div class="px-6 py-5 border-[#e9e9e9] bg-[#f7f8f9]">
 			<div class="flex flex-col gap-6">
 				<div>
-          		<p class="text-[#667085] text-sm">Ish beruvchini nomi</p>
+					<p class="text-[#667085] text-sm">Ish turi</p>
+					<p class="text-[#2b2f38] text-sm font-bold">
+						{{ data.liabilities }}
+					</p>
+				</div>
+				<div>
+					<p class="text-[#667085] text-sm">Ish beruvchini nomi</p>
 					<p class="text-[#2b2f38] text-sm font-bold">{{ data.name }}</p>
 				</div>
 				<div class="flex items-center justify-between">

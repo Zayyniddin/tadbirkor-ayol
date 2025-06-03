@@ -50,28 +50,36 @@
 					<!-- Column 1 -->
 					<div class="flex marquee flex-col animate-marquee-slow gap-4">
 						<div class="flex flex-col gap-4">
-							<HomeJobCard />
-							<HomeJobCard />
-							<HomeJobCard />
+							<HomeJobCard
+								v-for="(job, index) in data.slice(0, 3)"
+								:key="'col1-top-' + index"
+								:job="job"
+							/>
 						</div>
 						<div class="flex flex-col gap-4">
-							<HomeJobCard />
-							<HomeJobCard />
-							<HomeJobCard />
+							<HomeJobCard
+								v-for="(job, index) in data.slice(3, 6)"
+								:key="'col1-bottom-' + index"
+								:job="job"
+							/>
 						</div>
 					</div>
 
 					<!-- Column 2 -->
 					<div class="flex marquee flex-col animate-marquee-medium gap-4">
 						<div class="flex flex-col gap-4">
-							<HomeJobCard />
-							<HomeJobCard />
-							<HomeJobCard />
+							<HomeJobCard
+								v-for="(job, index) in data.slice(6, 9)"
+								:key="'col2-top-' + index"
+								:job="job"
+							/>
 						</div>
 						<div class="flex flex-col gap-4">
-							<HomeJobCard />
-							<HomeJobCard />
-							<HomeJobCard />
+							<HomeJobCard
+								v-for="(job, index) in data.slice(9, 12)"
+								:key="'col2-bottom-' + index"
+								:job="job"
+							/>
 						</div>
 					</div>
 				</div>
@@ -80,6 +88,16 @@
 	</section>
 </template>
 
-<script setup></script>
+<script setup>
+const data = ref([])
 
-<style lang="scss" scoped></style>
+function getData() {
+	useApi(`/api/v1/women/vacancies?page=1&page_size=12`).then(res => {
+		data.value = res.data.data
+	})
+}
+
+onMounted(() => {
+	getData()
+})
+</script>

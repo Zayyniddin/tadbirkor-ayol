@@ -12,8 +12,8 @@
 				<div>
 					<p class="text-gray-500 mb-6">
 						Ta'lim markazlari uchun qulay CRM modulimiz bilan tanishing! Bu
-						tizimni uzluksiz boshqaruvni ta'minlaydi, o'qishni yaxshi ko'radi va
-						biznesingizni tez yordam beradi.
+						tizim uzluksiz boshqaruvni ta'minlaydi, o'qishni yaxshi ko'radi va
+						biznesingizga tez yordam beradi.
 					</p>
 					<div class="flex items-center gap-4">
 						<a
@@ -43,17 +43,17 @@
 		<div class='flex items-center justify-between mt-20'>
 			<div>
 				<p class="font-semibold mb-3 text-2xl">+98 343</p>
-				<p class="text-gray-400 text-sm">Jami ro’hatdan o’tgan o’quvchilar</p>
+				<p class="text-gray-400 text-sm">Jami ro’yxatdan o’tgan o’quvchilar</p>
 			</div>
 
 			<div>
 				<p class="font-semibold mb-3 text-2xl">+98 343</p>
-				<p class="text-gray-400 text-sm">Joriy yil ro’hatdan o’tganlar</p>
+				<p class="text-gray-400 text-sm">Joriy yil ro’yxatdan o’tganlar</p>
 			</div>
 
 			<div>
 				<p class="font-semibold mb-3 text-2xl">+820</p>
-				<p class="text-gray-400 text-sm">Jami ro’hatdan o’tgan o’quvchilar</p>
+				<p class="text-gray-400 text-sm">Jami ro’yxatdan o’tgan o’quvchilar</p>
 			</div>
 
 			<div>

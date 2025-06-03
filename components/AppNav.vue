@@ -45,6 +45,15 @@
 								</div>
 							</nuxt-link>
 
+									<nuxt-link
+								:to="localePath(`/market`)"
+								class="text-gray-700 group"
+							>
+								<div class="p-2" @click="toggle = false">
+									<span class="group-[.router-link-exact-active]:text-green-600"> Mahsulot va xizmat sotish </span>
+								</div>
+							</nuxt-link>
+
 							<nuxt-link
 								:to="localePath(`/freejobs`)"
 								class="text-gray-700 group"
@@ -77,14 +86,7 @@
 								</div>
 							</nuxt-link>
 
-							<nuxt-link
-								:to="localePath(`/market`)"
-								class="text-gray-700 group"
-							>
-								<div class="p-2" @click="toggle = false">
-									<span class="group-[.router-link-exact-active]:text-green-600"> Mahsulot va xizmat sotish </span>
-								</div>
-							</nuxt-link>
+					
 						</div>
 					</div>
 				</div>

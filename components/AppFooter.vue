@@ -47,35 +47,29 @@
             </p>
             <div class="w-full flex flex-col gap-4">
               <nuxt-link
-                :to="localePath(`/plans`)"
+                :to="localePath(`/lesson`)"
                 class="text-white text-sm font-medium"
-                >{{ $t("nav.business_plans") }}</nuxt-link
+                >Ta'lim</nuxt-link
               >
               <nuxt-link
-                :to="localePath(`/#creditcondition`)"
+                :to="localePath(`/freejobs`)"
                 class="text-white text-sm font-medium"
-                >{{ $t("nav.steps") }}</nuxt-link
+                >Ish o'rinlari</nuxt-link
               >
-              <nuxt-link
-                :to="localePath(`/#creditcalculator`)"
-                class="text-white text-sm font-medium"
-                >{{ $t("nav.credit_caculator") }}</nuxt-link
-              >
-              <nuxt-link
-                :to="localePath(`/vacancy`)"
-                class="text-white text-sm font-medium"
-                >{{ $t("nav.vacancies") }}</nuxt-link
-              >
-              <nuxt-link
-                :to="localePath(`/decisions`)"
-                class="text-white text-sm font-medium"
-                >{{ $t("nav.decision") }}</nuxt-link
-              >
-              <!-- <nuxt-link :to="localePath(`/manuals`)" class="text-white text-sm font-medium">Qo'llanmalar</nuxt-link> -->
               <nuxt-link
                 :to="localePath(`/news`)"
                 class="text-white text-sm font-medium"
-                >{{ $t("nav.news") }}</nuxt-link
+                >Yangiliklar</nuxt-link
+              >
+              <nuxt-link
+                :to="localePath(`/questions`)"
+                class="text-white text-sm font-medium"
+                >Savol va takliflar</nuxt-link
+              >
+              <nuxt-link
+                :to="localePath(`/market`)"
+                class="text-white text-sm font-medium"
+                >Mahsulot va xizmat sotish</nuxt-link
               >
             </div>
           </div>

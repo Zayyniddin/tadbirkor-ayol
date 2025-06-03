@@ -17,7 +17,7 @@
 			</el-form-item>
 
 			<el-form-item label="Telfon raqam" prop="mobile_phone">
-				<el-input placeholder="+998 9" v-model="ruleForm.mobile_phone" />
+				<el-input placeholder="+998" v-model="ruleForm.mobile_phone" />
 			</el-form-item>
 
 			<el-form-item label="Elektron pochta manzili" prop="email">
@@ -25,11 +25,11 @@
 			</el-form-item>
 
 			<el-form-item label="Faoliyat sohasi" prop="activity">
-				<el-input placeholder="Tadbirkorlik" v-model="ruleForm.activity" />
+				<el-input  v-model="ruleForm.activity" />
 			</el-form-item>
 
 			<el-form-item label="Qaysi soha bo’yicha" prop="direction">
-				<el-input placeholder="Dasturchi" v-model="ruleForm.direction" />
+				<el-input v-model="ruleForm.direction" />
 			</el-form-item>
 
 			<el-form-item label="Muammoni batafsil tasnifi" prop="description">

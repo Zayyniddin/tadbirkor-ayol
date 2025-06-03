@@ -32,7 +32,7 @@
 				</div>
 			</div>
 			<img
-				class="absolute right-8 -bottom-2 w-[450px] h-[500px]"
+				class="absolute right-8 -bottom-2 w-[350px] h-[400px]"
 				src="@/assets/images/smart-banner.png"
 				alt=""
 			/>

@@ -32,6 +32,7 @@ export { priceFilter } from '../composables/priceFilter';
 export { useApi } from '../composables/useApi';
 export { useApiFetch } from '../composables/useApiFetch';
 export { useBaseUrl } from '../composables/useBaseUrl';
+export { usePhoneMask } from '../composables/usePhoneMask';
 export { useAdverStore } from '../stores/adver';
 export { useDictionaryStore } from '../stores/dictionary';
 export { useUserStore } from '../stores/user';

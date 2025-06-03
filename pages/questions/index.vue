@@ -30,7 +30,7 @@
 				<h2 class="text-4xl max-w-[400px] font-bold mb-4">
 					Tez-tez beriladigan savollar
 				</h2>
-				<el-collapse v-model="activeNames" @change="handleChange">
+				<el-collapse v-model="activeNames" accordion @change="handleChange">
 					<el-collapse-item
 						title="Imtiyozli kredit mablag‘I olish tartibi qanday?"
 						name="1"

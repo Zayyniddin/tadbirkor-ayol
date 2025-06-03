@@ -1,38 +1,113 @@
 <template>
 	<div class="w-full">
-		<div class="f-container mx-auto py-20">
+		<div class="f-container mx-auto py-10">
 			<div class="flex gap-10">
-				<div class="flex-1 space-y-12">
+				<div class="flex-1 space-y-6">
+					<p class='text-2xl font-semibold'>{{ data.liabilities }}</p>
 					<img
-						class="rounded-xl"
-						src="@/assets/images/onlinemarket1.jpg"
+						class="rounded-xl min-w-[480px] h-[330px]"
+						:src="`https://cabinet.loyihalar-fabrikasi.uz/uploads/images/${data.photo}`"
 						alt=""
 					/>
-					<div class="flex items-start gap-10">
-						<p class="text-base whitespace-nowrap font-bold">Vazifa tavsifi</p>
-						<p class="text-sm text-black leading-[140%]">
-							Salonimizga mijozlarni iliq kutib oladigan, xizmatlarni tartibga
-							soluvchi va jamoa ishini samarali boshqarishda yordam beradigan
-							administrator izlayapmiz. Siz mijozlar bilan bevosita muloqotda
-							bo‘lasiz, yozilishlarni boshqarasiz va umumiy ish jarayonining
-							muammosiz kechishini ta’minlaysiz.
+					<div class="flex items-center gap-10">
+						<p
+							class="text-base whitespace-nowrap text-gray-700 font-bold w-[130px]"
+						>
+							Ish Beruvchi:
+						</p>
+						<p class="text-base text-black">
+							{{ data.name }}
 						</p>
 					</div>
-					<div class="flex items-start gap-10">
-						<p class="text-base whitespace-nowrap font-bold">Vazifalar</p>
-						<ul class="list-disc list-inside space-y-4">
-							<li class="text-sm text-black leading-[140%]">
-								Mijozlarni samimiy kutib olish va yo‘l-yo‘riq ko‘rsatish
-							</li>
-							<li class="text-sm text-black leading-[140%]">
-								Mijozlarni samimiy kutib olish va yo‘l-yo‘riq ko‘rsatish
-							</li>
-							<li class="text-sm text-black leading-[140%]">
-								Mijozlarni samimiy kutib olish va yo‘l-yo‘riq ko‘rsatish
-							</li>
-						</ul>
+					<div class="flex items-center gap-10">
+						<p
+							class="text-base whitespace-nowrap text-gray-700 font-bold w-[130px]"
+						>
+							Telefon raqam:
+						</p>
+						<p class="text-base text-black">
+							+{{ usePhoneMask(data.phone_number) }}
+						</p>
 					</div>
-					<JobsSendjob />
+					<div class="flex items-center gap-10">
+						<p
+							class="text-base whitespace-nowrap text-gray-700 font-bold min-w-[130px]"
+						>
+							Ish kunlari:
+						</p>
+						<div class="flex gap-2 flex-wrap">
+							<el-tag
+								v-for="item in data.working_days"
+								:key="item.id"
+								type="primary"
+								>{{ item.name }}</el-tag
+							>
+						</div>
+					</div>
+					<div class="flex items-center gap-10">
+						<p
+							class="text-base whitespace-nowrap text-gray-700 font-bold w-[130px]"
+						>
+							Yosh:
+						</p>
+						<p class="text-base text-black">
+							{{ data.age?.name }}
+						</p>
+					</div>
+
+					<div class="flex items-center gap-10">
+						<p
+							class="text-base whitespace-nowrap text-gray-700 font-bold w-[130px]"
+						>
+							Mutaxasislik:
+						</p>
+						<p class="text-base text-black">
+							{{ data.speciality?.name }}
+						</p>
+					</div>
+
+					<div class="flex items-start gap-10">
+						<p
+							class="text-base whitespace-nowrap text-gray-700 font-bold w-[130px]"
+						>
+							Kerakli tillar:
+						</p>
+						<div class="flex gap-2">
+							<el-tag
+								v-for="item in data.foreign_languages"
+								:key="item.id"
+								type="primary"
+								>{{ item.name }}</el-tag
+							>
+						</div>
+					</div>
+
+					<div class="flex items-center gap-10">
+						<p
+							class="text-base whitespace-nowrap text-gray-700 font-bold w-[130px]"
+						>
+							Ish Vaqti:
+						</p>
+						<p class="text-base text-black">
+							{{ data.working_mode?.name }}
+						</p>
+					</div>
+
+					<div class="flex items-center gap-10">
+						<p
+							class="text-base whitespace-nowrap text-gray-700 font-bold w-[130px]"
+						>
+							Manzil:
+						</p>
+						<p class="text-base text-black">
+							{{ data.region?.name }}, {{ data.district?.name }}
+							{{ data.mahalla?.name }}
+						</p>
+					</div>
+
+					<div class="!my-10">
+						<JobsSendjob />
+					</div>
 				</div>
 				<div class="flex-1 flex flex-col gap-4">
 					<p class="text-lg whitespace-nowrap font-bold">Kalit so’zlar</p>
@@ -79,65 +154,57 @@
 						</div>
 					</div>
 				</div>
-				<div class='flex flex-col gap-4'>
-          <p class='text-lg font-bold'>O'xshash ish o'rinlari</p>
-					<div class="max-w-[200px] w-full rounded-xl flex flex-col gap-2">
+				<div class="flex flex-col gap-4">
+					<p class="text-lg font-bold">O'xshash ish o'rinlari</p>
+					<nuxt-link
+						:to="`/freejobs/${item.id}`"
+						v-for="item in extra"
+						:key="item.id"
+						class="max-w-[250px] group w-full rounded-xl flex flex-col gap-2"
+					>
 						<img
 							class="rounded-xl"
-							src="@/assets/images/onlinemarket1.jpg"
-							alt=""
+							:src="`https://cabinet.loyihalar-fabrikasi.uz/uploads/images/${item.photo}`"
+							alt="er"
 						/>
-						<div class='flex flex-col gap-2'>
+						<div class="flex flex-col gap-2">
 							<div>
-								<p class='text-xs text-gray-400'>Ish beruvchi nomi</p>
-								<p class='text-sm text-gray-800 font-semibold'>Teshaboeva Nigora</p>
+								<p class="text-xs text-gray-400">Ish turi</p>
+								<p
+									class="text-sm group-hover:text-green-500 transition-all text-gray-800 font-semibold"
+								>
+									{{ item.liabilities }}
+								</p>
 							</div>
-							<div class='flex items-center justify-between'>
-								<div>
-									<p class='text-xs text-gray-400'>Tajriba</p>
-									<p class='text-sm text-gray-800 font-semibold'>4-6 yil</p>
-								</div>
-								<div>
-									<p class='text-xs text-gray-400'>Ish haqqi</p>
-									<p class='text-sm text-gray-800 font-semibold'>2 700 000 so'm</p>
-								</div>
-							</div>
-              <div>
-                <p class='text-xs text-gray-400'>Manzil</p>
-                <p class='text-sm text-gray-800 font-semibold'>Andijon test</p>
-              </div>
-						</div>
-					</div>
-
-          <div class="max-w-[200px] w-full rounded-xl flex flex-col gap-2">
-						<img
-							class="rounded-xl"
-							src="@/assets/images/onlinemarket1.jpg"
-							alt=""
-						/>
-						<div class='flex flex-col gap-2'>
 							<div>
-								<p class='text-xs text-gray-400'>Ish beruvchi nomi</p>
-								<p class='text-sm text-gray-800 font-semibold'>Teshaboeva Nigora</p>
+								<p class="text-xs text-gray-400">Ish beruvchi nomi</p>
+								<p class="text-sm text-gray-800 font-semibold">
+									{{ item.name }}
+								</p>
 							</div>
-							<div class='flex items-center justify-between'>
+							<div class="flex items-center justify-between">
 								<div>
-									<p class='text-xs text-gray-400'>Tajriba</p>
-									<p class='text-sm text-gray-800 font-semibold'>4-6 yil</p>
+									<p class="text-xs text-gray-400">Tajriba</p>
+									<p class="text-sm text-gray-800 font-semibold">
+										{{ item.experience.name }}
+									</p>
 								</div>
 								<div>
-									<p class='text-xs text-gray-400'>Ish haqqi</p>
-									<p class='text-sm text-gray-800 font-semibold'>2 700 000 so'm</p>
+									<p class="text-xs text-gray-400">Ish haqqi</p>
+									<p class="text-sm text-gray-800 font-semibold">
+										{{ priceFilter(item.salary) }} so'm
+									</p>
 								</div>
 							</div>
-              <div>
-                <p class='text-xs text-gray-400'>Manzil</p>
-                <p class='text-sm text-gray-800 font-semibold'>Andijon test</p>
-              </div>
+							<div>
+								<p class="text-xs text-gray-400">Manzil</p>
+								<p class="text-sm text-gray-800 font-semibold">
+									{{ item.region?.name }}, {{ item.district?.name }}
+									{{ item.mahalla?.name }}
+								</p>
+							</div>
 						</div>
-					</div>
-
-
+					</nuxt-link>
 				</div>
 			</div>
 		</div>
@@ -149,6 +216,15 @@ definePageMeta({
 	layout: 'main-layout',
 })
 const route = useRoute()
-</script>
+const data = ref([])
+const extra = ref([])
 
-<style lang="scss" scoped></style>
+function getData() {
+	useApi(`/api/v1/women/vacancy/detail?id=${route.params.id}`).then(res => {
+		data.value = res.data.data
+		extra.value = res.data.extra
+	})
+}
+
+onMounted(() => getData())
+</script>

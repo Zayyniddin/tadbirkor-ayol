@@ -42,6 +42,12 @@
   }
 }
 
+.el-tag.el-tag--primary {
+   color: white !important;
+   background: rgb(2 173 162);
+   border: none !important;
+} 
+
 .custom-input {
   .el-input__wrapper {
     padding: 0;

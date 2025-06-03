@@ -4,7 +4,7 @@
       <div
         class="flex-1 max-w-[550px] px-14 py-16 flex flex-col justify-between">
         <h1 class="text-4xl font-bold">
-          Moliyaviy hisobatlarni avtamatik tarzda shakillantiring
+          Moliyaviy hisobotlarni avtomatik tarzda shakillantiring
         </h1>
         <div class="flex flex-col gap-6">
           <p class="text-base leading-[150%] font-medium">
