@@ -32,7 +32,7 @@
 				</h2>
 				<el-collapse v-model="activeNames" accordion @change="handleChange">
 					<el-collapse-item
-						title="Imtiyozli kredit mablag‘I olish tartibi qanday?"
+						title="Imtiyozli kredit mablag‘i olish tartibi qanday?"
 						name="1"
 						:icon="CaretRight"
 					>
@@ -47,7 +47,7 @@
 						</div>
 					</el-collapse-item>
 					<el-collapse-item
-						title="Imtiyozli kredit mablag‘I qancha muddatga va yechi foizdan beriladi?"
+						title="Imtiyozli kredit mablag‘i qancha muddatga va yechi foizdan beriladi?"
 						name="2"
 					>
 						<template #icon="{ isActive }">
@@ -98,7 +98,7 @@
 						<div>Kredit oluvchi kamida 30% o ‘zini ulishi bo’ladi.</div>
 					</el-collapse-item>
 					<el-collapse-item
-						title="Hamroh krediti kimlarga kredit ajratiladi?"
+						title="Hamroh krediti kimlarga ajratiladi?"
 						name="8"
 					>
 						<div>
@@ -133,7 +133,7 @@
 						</div>
 					</el-collapse-item>
 					<el-collapse-item
-						title="Hamroh krediti yillik nechi faoizdan ajratiladi?"
+						title="Hamroh krediti yillik nechi foizdan ajratiladi?"
 						name="11"
 					>
 						<div>
@@ -142,7 +142,7 @@
 						</div>
 					</el-collapse-item>
 					<el-collapse-item
-						title="Hamroh krediti qasi shakilda ajratiladimi?"
+						title="Hamroh krediti qaysi shakilda ajratiladimi?"
 						name="12"
 					>
 						<div>

@@ -16,7 +16,7 @@
 				<el-input v-model="ruleForm.business_name" />
 			</el-form-item>
 
-			<el-form-item label="Telfon raqam" prop="mobile_phone">
+			<el-form-item label="Telefon raqam" prop="mobile_phone">
 				<el-input placeholder="+998" v-model="ruleForm.mobile_phone" />
 			</el-form-item>
 
@@ -25,7 +25,7 @@
 			</el-form-item>
 
 			<el-form-item label="Faoliyat sohasi" prop="activity">
-				<el-input  v-model="ruleForm.activity" />
+				<el-input v-model="ruleForm.activity" />
 			</el-form-item>
 
 			<el-form-item label="Qaysi soha bo’yicha" prop="direction">
@@ -96,7 +96,7 @@ const rules = reactive({
 			message: 'Iltimos, telefon raqamini kiriting',
 			trigger: 'blur',
 		},
-],
+	],
 	business_name: [
 		{
 			required: true,

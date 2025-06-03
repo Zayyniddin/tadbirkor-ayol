@@ -12,7 +12,7 @@
 				<el-input v-model="ruleForm.full_name" />
 			</el-form-item>
 
-			<el-form-item label="Telfon raqam" prop="mobile_phone">
+			<el-form-item label="Telefon raqam" prop="mobile_phone">
 				<el-input placeholder="+998" v-model="ruleForm.mobile_phone" />
 			</el-form-item>
 
@@ -80,7 +80,7 @@ const rules = reactive({
 			message: 'Iltimos, telefon raqamini kiriting',
 			trigger: 'blur',
 		},
-],
+	],
 	description: [
 		{ required: true, message: 'Iltimos, muammoni kiriting', trigger: 'blur' },
 	],
