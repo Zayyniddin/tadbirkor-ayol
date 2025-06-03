@@ -138,7 +138,7 @@
                         <div class="w-full flex flex-col justify-between min-h-[1040px]">
                             <div class="w-full">
                                 <div class="f-full flex justify-between items-end gap-4 mb-6 border-b pb-3">
-                                    <img class="h-8" src="@/assets/images/logo.png" />
+                                    <!-- <img class="h-8" src="@/assets/images/logo.png" /> -->
                                     <QRCodeVue3 :width="70" :height="70"
                                     :value="`https://test.worknet.uz/plans/${PlanInfo.id}`" :image="ShortLogo"
                                         :dotsOptions="{ type: 'dots', color: '#000' }" />
@@ -240,7 +240,7 @@
 
                             <div class="f-full flex justify-between gap-4 mb-4 py-3 border-t">
                                 <div class="w-[50%]">
-                                    <img class="h-8 mb-2" src="@/assets/images/logo.png" />
+                                    <!-- <img class="h-8 mb-2" src="@/assets/images/logo.png" /> -->
                                     <p class="text-xs mb-2">{{ $t('about_system') }}</p>
                                 </div>
                                 <QRCodeVue3 :width="70" :height="70" :value="`https://test.worknet.uz/plans/${PlanInfo.id}`"
