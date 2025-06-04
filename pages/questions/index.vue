@@ -50,11 +50,6 @@
 						title="Imtiyozli kredit mablag‘i qancha muddatga va yechi foizdan beriladi?"
 						name="2"
 					>
-						<template #icon="{ isActive }">
-							<span class="icon-ele">
-								{{ isActive ? 'Expanded' : 'Collapsed' }}
-							</span>
-						</template>
 						<div>
 							Kredit muddati 84 oygach imtiyozli davri 36 oy kredit foiz 17.5%
 							ajratiladi
